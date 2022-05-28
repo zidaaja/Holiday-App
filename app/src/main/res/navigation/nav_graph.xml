@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hariLiburListFragment">
+
+    <fragment
+        android:id="@+id/hariLiburListFragment"
+        android:name="com.amazida.harilibur.ui.HariLiburListFragment"
+        android:label="Libur Indonesia Tahun 2022" >
+        <action
+            android:id="@+id/action_hariLiburListFragment_to_hariLiburDetailFragment"
+            app:destination="@id/hariLiburDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hariLiburDetailFragment"
+        android:name="com.amazida.harilibur.ui.HariLiburDetailFragment"
+        android:label="List Hari Libur" >
+        <action
+            android:id="@+id/action_hariLiburDetailFragment_to_hariLiburListFragment"
+            app:destination="@id/hariLiburListFragment" />
+    </fragment>
+</navigation>

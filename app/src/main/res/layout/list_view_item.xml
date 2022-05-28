@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="harilibur"
+            type="com.amazida.harilibur.network.HariLibur" />
+        <variable
+            name="clickListener"
+            type="com.amazida.harilibur.ui.HariLiburListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="@{() -> clickListener.onClick(harilibur)}"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/yellow">
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="cursive"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:text="@{harilibur.namaBulan}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Judul disini" />
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
